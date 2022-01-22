@@ -6,8 +6,7 @@ const express = require('express');
 
 router.post('/create',  validator,  RegisterUser)
 router.post('/signin', LoginUser);
-router.get('/users', Authentication, UserList);
+router.get('/users',UserList);
 router.get('/users/:id',  UserlistById);
-router.put('/user/update/:id', Authentication,TokenAuthorization, update);
 
  module.exports = router;
